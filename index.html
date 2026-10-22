@@ -185,17 +185,24 @@
 
 /* ===== STORIES ===== */
 .bhp .stories{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
-.bhp .story{border-top:4px solid var(--bh-red);background:#fff;border-radius:0 0 14px 14px;padding:26px 28px;border-left:1px solid var(--bh-line);border-right:1px solid var(--bh-line);border-bottom:1px solid var(--bh-line)}
-.bhp .story h3{margin-bottom:10px}
-.bhp .story p{color:var(--bh-mut);font-size:15px;margin-bottom:12px}
-.bhp .story blockquote{font-size:15px;font-weight:600;color:var(--bh-navy);padding-left:14px;border-left:3px solid var(--bh-line)}
+.bhp .story{background:#fff;border:1px solid var(--bh-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.bhp .story-body{padding:22px 26px 26px;border-top:4px solid var(--bh-red)}
+.bhp .story h3{margin-bottom:8px}
+.bhp .story p{color:var(--bh-mut);font-size:15px}
+.bhp .yt{position:relative;display:block;width:100%;aspect-ratio:16/9;background:#000 center/cover no-repeat;border:0;padding:0;cursor:pointer}
+.bhp .yt::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.45))}
+.bhp .yt span{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;background:var(--bh-red);border-radius:14px;transition:transform .2s}
+.bhp .yt span::after{content:"";position:absolute;left:28px;top:14px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff}
+.bhp .yt:hover span,.bhp .yt:focus-visible span{transform:scale(1.08)}
+.bhp .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.bhp .stories-cta{margin-top:30px;display:flex;justify-content:center}
 
 /* ===== INSURANCE ===== */
-.bhp .ins-top{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.bhp .ins-badges{display:flex;gap:14px}
-.bhp .ins-badges img{height:110px;width:auto;border-radius:10px;border:1px solid var(--bh-line)}
-.bhp .logos{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:30px}
-.bhp .logos img{width:100%;aspect-ratio:3/2;object-fit:contain;background:#fff;border:1px solid var(--bh-line);border-radius:10px;padding:8px}
+.bhp .ins-top{max-width:760px}
+.bhp .ins-sub{font-size:1.25rem;margin:46px 0 6px}
+.bhp .ins-note{font-size:14.5px;color:var(--bh-mut)}
+.bhp .logos{display:grid;grid-template-columns:repeat(7,1fr);gap:10px 18px;margin-top:22px;align-items:center}
+.bhp .logos img{width:100%;max-width:150px;aspect-ratio:256/102;object-fit:contain;margin:0 auto}
 
 /* ===== FACILITIES ===== */
 .bhp .fac{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
@@ -215,11 +222,11 @@
 .bhp .bw-i p{font-size:12.5px;color:rgba(255,255,255,.75)}
 .bhp .aw-title{color:#fff;font-size:1.15rem;margin:36px 0 16px}
 .bhp .aw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.bhp .aw{background:#fff;border-radius:12px;overflow:hidden}
-.bhp .aw img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--bh-mist)}
-.bhp .aw div{padding:12px 14px 14px}
-.bhp .aw h4{font-size:.84rem;line-height:1.35;color:var(--bh-navy);margin-bottom:6px;font-weight:700}
-.bhp .aw span{font-size:11.5px;font-weight:700;color:var(--bw-purple);letter-spacing:.02em}
+.bhp .aw{background:#fff;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.bhp .aw img{width:100%;aspect-ratio:2/3;object-fit:cover;object-position:top;background:var(--bh-mist)}
+.bhp .aw div{padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.bhp .aw h4{font-size:.86rem;line-height:1.35;color:var(--bh-navy);font-weight:700;margin:0}
+.bhp .aw span{display:block;font-size:12px;line-height:1.4;font-weight:600;color:var(--bw-purple);margin-top:auto}
 
 /* ===== FAQ ===== */
 .bhp .faq{margin-top:26px;max-width:860px}
@@ -231,17 +238,19 @@
 .bhp .faq details p{padding:0 0 20px;color:var(--bh-mut)}
 
 /* ===== LOCATIONS ===== */
-.bhp .locs{margin-top:30px}
-.bhp .loc-main{background:#fff;border:1px solid var(--bh-line);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;align-items:center}
-.bhp .loc-main .map{align-self:stretch;min-height:340px}
-.bhp .loc-main .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
-.bhp .loc-main>div{padding:28px 32px}
-.bhp .loc-main h3{margin-bottom:6px}
-.bhp .loc-main p{font-size:14.5px;color:var(--bh-mut);margin-bottom:14px}
-.bhp .access{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
-.bhp .access div{padding:0}
-.bhp .access b{display:block;font-size:1.1rem;color:var(--bh-red)}
-.bhp .access span{font-size:12.5px;color:var(--bh-mut)}
+.bhp .loc{background:#854399;color:#fff;padding:70px 0}
+.bhp .loc .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center}
+.bhp .loc h2{color:#fff;margin-bottom:18px}
+.bhp .loc h3{color:#fff;font-size:1.2rem;margin-bottom:10px}
+.bhp .loc p{color:rgba(255,255,255,.9);font-size:15px;margin-bottom:24px}
+.bhp .btn-pink{background:#DF1C49;color:#fff}
+.bhp .btn-pink:hover{background:#B8133B}
+.bhp .access{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.bhp .access svg{width:34px;height:34px;display:block;margin-bottom:12px}
+.bhp .access b{display:block;font-size:1.05rem;color:#fff;margin-bottom:4px}
+.bhp .access span{font-size:12.5px;line-height:1.45;color:rgba(255,255,255,.85);display:block}
+.bhp .loc .map{border-radius:14px;overflow:hidden;min-height:360px;background:rgba(255,255,255,.1)}
+.bhp .loc .map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
 
 /* ===== FINAL ===== */
 .bhp .final{background:var(--bh-red);color:#fff;padding:70px 0}
@@ -249,16 +258,22 @@
 .bhp .final .cta-row{justify-content:center}
 .bhp .final h2{color:#fff}
 .bhp .final p{color:rgba(255,255,255,.88)}
-.bhp .foot{background:var(--bh-navy);color:rgba(255,255,255,.7);font-size:13px;padding:26px 0}
-.bhp .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.bhp .foot{background:#fff;color:var(--bh-ink);font-size:13.5px;padding:36px 0 28px;border-top:1px solid var(--bh-line)}
+.bhp .foot-top{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.bhp .foot-top>img{height:58px;width:auto}
+.bhp .foot-top b{display:block;color:var(--bh-navy);margin-bottom:4px}
+.bhp .foot-top p{color:var(--bh-mut);max-width:420px;line-height:1.5}
+.bhp .foot-aw{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:26px 0 18px}
+.bhp .foot-aw img{height:84px;width:auto}
+.bhp .foot-copy{text-align:center;font-size:12.5px;color:var(--bh-mut)}
 .bhp .wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.22);z-index:50}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width:960px){
   .bhp .hero-grid,.bhp .twocol,.bhp .tech,.bhp .ins-top,.bhp .locs{grid-template-columns:1fr}
   .bhp .tech.flip .tech-img{order:0}
-  .bhp .loc-main{grid-template-columns:1fr}
-  .bhp .loc-main .map,.bhp .loc-main .map iframe{min-height:300px}
+  .bhp .loc .wrap{grid-template-columns:1fr}
+  .bhp .loc .map,.bhp .loc .map iframe{min-height:300px}
   .bhp .strip .wrap{grid-template-columns:1fr 1fr}
   .bhp .bw-grid{grid-template-columns:repeat(2,1fr)}
   .bhp .aw-grid{grid-template-columns:repeat(3,1fr)}
@@ -277,8 +292,14 @@
   .bhp .brand img{height:32px}
   .bhp .top .btn{padding:9px 14px;font-size:13px}
   .bhp .bw{padding:30px 22px}
+  .bhp .loc{padding:54px 0}
+  .bhp .access{gap:12px}
+  .bhp .foot-top{justify-content:center;text-align:center}
+  .bhp .foot-aw img{height:64px}
   .bhp .bw-grid{grid-template-columns:1fr}
-  .bhp .aw-grid{grid-template-columns:1fr 1fr}
+  .bhp .aw-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .bhp .aw{scroll-snap-align:start}
+  .bhp .logos{grid-template-columns:repeat(3,1fr);gap:8px 14px}
 }
 @media (prefers-reduced-motion:reduce){.bhp *{transition:none!important}}
 </style>
@@ -598,19 +619,25 @@
 <!-- TODO: testimoni pasien perlu tinjauan legal (Permenkes 1787/2010 Pasal 4) sebelum dipakai di iklan -->
 <section class="sec" id="cerita">
   <div class="wrap">
-    <h2>Mereka yang memilih berobat di negeri sendiri</h2>
+    <h2>Di sini, mereka menemukan keberanian</h2>
+    <p class="lead">Kisah pasien yang memutuskan menjalani pasang ring jantung di BraveHeart, diceritakan langsung oleh mereka.</p>
     <div class="stories">
-      <div class="story">
-        <h3>Bapak Budi, Jakarta</h3>
-        <p>Merasa sehat tanpa keluhan, Pak Budi baru mengetahui ada penyakit jantung koroner saat menjalani skrining jantung. Beliau menjalani pemasangan ring di BraveHeart dan pulih dengan baik.</p>
-        <blockquote>&ldquo;Rutin lakukan skrining jantung, jaga pola hidup, dan percayalah pengobatan di negeri sendiri bisa diandalkan.&rdquo;</blockquote>
-      </div>
-      <div class="story">
-        <h3>Bapak Abdul, Pontianak</h3>
-        <p>Nyeri dada dan sesak yang sering kambuh membawa Pak Abdul dari Pontianak ke BraveHeart Jakarta. Ditangani tim intervensi dengan teknik High Quality PCI, kondisinya membaik dan beliau dapat segera kembali ke rumah.</p>
-        <blockquote>Perawatan yang tepat tidak harus jauh dari rumah.</blockquote>
-      </div>
+      <article class="story">
+        <button type="button" class="yt" data-id="Xe6wiB1u8Ts" style="background-image:url('https://i.ytimg.com/vi/Xe6wiB1u8Ts/hqdefault.jpg')" aria-label="Putar video: Dari Pontianak menuju BraveHeart untuk pemasangan ring jantung"><span></span></button>
+        <div class="story-body">
+          <h3>Bapak Abdul, Pontianak</h3>
+          <p>Nyeri dada dan sesak yang sering kambuh membawa Pak Abdul dari Pontianak ke BraveHeart Jakarta. Ditangani dengan teknik High Quality PCI, kondisinya membaik dan beliau dapat segera kembali ke rumah.</p>
+        </div>
+      </article>
+      <article class="story">
+        <button type="button" class="yt" data-id="G-ij7dNcWzk" style="background-image:url('https://i.ytimg.com/vi/G-ij7dNcWzk/hqdefault.jpg')" aria-label="Putar video: Skrining jantung menemukan penyakit jantung koroner"><span></span></button>
+        <div class="story-body">
+          <h3>Bapak Budi, Jakarta</h3>
+          <p>Merasa sehat tanpa keluhan, Pak Budi baru mengetahui ada penyakit jantung koroner saat menjalani skrining jantung. Beliau menjalani pemasangan ring di BraveHeart dan pulih dengan baik.</p>
+        </div>
+      </article>
     </div>
+    <div class="stories-cta"><a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Konsultasikan kondisi Anda via WhatsApp</a></div>
   </div>
 </section>
 
@@ -623,25 +650,24 @@
         <p class="lead" style="margin-bottom:22px">Tim Insurance Relation BraveHeart membantu menghitung estimasi biaya dan memastikan asuransi swasta Anda dapat digunakan dengan tepat &mdash; sebelum Anda memutuskan.</p>
         <a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Tanyakan estimasi biaya</a>
       </div>
-      <div class="ins-badges">
-        <img src="images/insurance-prudential-priority.jpg" alt="Prudential Priority">
-        <img src="images/insurance-allianz-blue-eagle.jpg" alt="Allianz Blue Eagle">
-      </div>
     </div>
-    <div class="logos" aria-label="Rekanan asuransi dan perusahaan">
-      <img src="images/insurance-partner-01.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-02.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-03.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-04.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-05.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-06.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-07.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-08.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-09.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-10.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-11.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-12.jpg" alt="Rekanan asuransi" loading="lazy">
-      <img src="images/insurance-partner-13.jpg" alt="Rekanan asuransi" loading="lazy">
+    <h3 class="ins-sub">Mitra asuransi &amp; korporasi</h3>
+    <p class="ins-note">Kami bekerja sama dengan penyedia asuransi dan berbagai korporasi untuk memudahkan akses layanan kesehatan Anda.</p>
+    <div class="logos" aria-label="Mitra asuransi dan korporasi">
+      <img src="images/partner-prudential.webp" alt="Prudential" loading="lazy">
+      <img src="images/partner-allianz.webp" alt="Allianz" loading="lazy">
+      <img src="images/partner-manulife.webp" alt="Manulife" loading="lazy">
+      <img src="images/partner-sinarmas.webp" alt="Asuransi Sinarmas" loading="lazy">
+      <img src="images/partner-aia.webp" alt="AIA" loading="lazy">
+      <img src="images/partner-axa-mandiri.webp" alt="AXA Mandiri" loading="lazy">
+      <img src="images/partner-sunlife.webp" alt="Sun Life" loading="lazy">
+      <img src="images/partner-bri-life.webp" alt="BRI Life" loading="lazy">
+      <img src="images/partner-astra.webp" alt="Asuransi Astra" loading="lazy">
+      <img src="images/partner-mandiri-inhealth.webp" alt="Mandiri Inhealth" loading="lazy">
+      <img src="images/partner-bni-life.webp" alt="BNI Life" loading="lazy">
+      <img src="images/partner-generali.webp" alt="Generali" loading="lazy">
+      <img src="images/partner-pln.webp" alt="PLN" loading="lazy">
+      <img src="images/partner-bank-indonesia.webp" alt="Bank Indonesia" loading="lazy">
     </div>
   </div>
 </section>
@@ -712,29 +738,6 @@
   </div>
 </section>
 
-<!-- ===================== LOCATIONS ===================== -->
-<section class="sec sec-mist" id="lokasi">
-  <div class="wrap">
-    <h2>Lokasi tindakan</h2>
-    <p class="lead">Tindakan pasang ring jantung dengan metode High Quality PCI dilakukan di BraveHeart, Brawijaya Hospital Saharjo &mdash; di tengah Jakarta dan mudah dijangkau dari bandara maupun stasiun.</p>
-    <div class="locs">
-      <div class="loc-main">
-        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.297192307743!2d106.8479318!3d-6.2244893999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f364bb352a01%3A0xc7024a70f68f0376!2sBraveHeart%20Cardiovascular%20Center!5e0!3m2!1sen!2sid!4v1792651249793!5m2!1sen!2sid" title="Peta BraveHeart Cardiovascular Center, Brawijaya Hospital Saharjo" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-        <div>
-          <h3>Brawijaya Hospital Saharjo, Lantai 8</h3>
-          <p>Jl. Dr. Saharjo No. 199, Tebet Barat, Tebet, Jakarta Selatan 12810</p>
-          <div class="access">
-            <div><b>15 menit</b><span>dari Stasiun KCIC &amp; MRT</span></div>
-            <div><b>15 menit</b><span>dari Bandara Halim Perdanakusuma</span></div>
-            <div><b>15 menit</b><span>dari Pintu Tol Cawang</span></div>
-          </div>
-          <a class="btn btn-line" href="https://maps.app.goo.gl/vXGtBN2S2tYGitYc8" target="_blank" rel="noopener">Dapatkan petunjuk arah</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== FINAL CTA ===================== -->
 <section class="final" id="kontak">
   <div class="wrap">
@@ -748,10 +751,38 @@
   </div>
 </section>
 
+<!-- ===================== LOCATIONS ===================== -->
+<section class="loc" id="lokasi">
+  <div class="wrap">
+    <div>
+      <h2>Perawatan kelas dunia di jantung kota Jakarta</h2>
+      <h3>BraveHeart di Brawijaya Hospital Saharjo, Lantai 8</h3>
+      <p>Terletak di pusat Jakarta, fasilitas kami hanya berjarak 15 menit dari Stasiun Kereta Cepat KCIC dan Bandara Halim Perdanakusuma, sehingga mudah dijangkau pasien dari Jakarta maupun dari kota lain di seluruh Indonesia.</p>
+      <a class="btn btn-pink" href="https://maps.app.goo.gl/vXGtBN2S2tYGitYc8" target="_blank" rel="noopener">Dapatkan petunjuk arah &rarr;</a>
+      <div class="access">
+        <div><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2C8 2 4 2.5 4 6v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5v.5h2.2l2-2h3.6l2 2H18v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4zM7.5 17a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3.5-7H6V6h5v4zm2 0V6h5v4h-5zm3.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg><b>15 menit</b><span>dari Stasiun Kereta Cepat KCIC &amp; Stasiun MRT</span></div>
+        <div><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M2.5 19h19v2h-19v-2zm19.57-9.36c-.21-.8-1.04-1.28-1.84-1.06L14.92 10 8 3.57l-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 2.59 4.49L21 11.49c.81-.23 1.28-1.05 1.07-1.85z"/></svg><b>15 menit</b><span>dari Bandara Internasional Halim Perdanakusuma</span></div>
+        <div><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M9.5 3h5l5.5 18h-6.3l-.6-4h-2.2l-.6 4H4L9.5 3zm1.7 2-.3 3h2.2l-.3-3h-1.6zm-.5 5-.4 4h3.4l-.4-4h-2.6z"/></svg><b>15 menit</b><span>dari Pintu Tol Cawang</span></div>
+      </div>
+    </div>
+    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.297192307743!2d106.8479318!3d-6.2244893999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f364bb352a01%3A0xc7024a70f68f0376!2sBraveHeart%20Cardiovascular%20Center!5e0!3m2!1sen!2sid!4v1792651249793!5m2!1sen!2sid" title="Peta BraveHeart Cardiovascular Center, Brawijaya Hospital Saharjo" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  </div>
+</section>
+
 <footer class="foot">
   <div class="wrap">
-    <span>BraveHeart Cardiovascular Center, Brawijaya Hospital Saharjo Lantai 8</span>
-    <span>&copy; 2026 Brawijaya Hospital</span>
+    <div class="foot-top">
+      <img src="images/brand-braveheart-logo.png" alt="BraveHeart, Brawijaya Hospital" loading="lazy">
+      <div>
+        <b>Brawijaya Hospital Saharjo, Lantai 8</b>
+        <p>Jl. Dr. Saharjo No. 199, Tebet Barat, Kec. Tebet, Kota Jakarta Selatan, DKI Jakarta 12810</p>
+      </div>
+    </div>
+    <div class="foot-aw">
+      <img src="images/footer-award-cnbc.jpg" alt="CNBC Indonesia Awards 2024: Outstanding Technology-Driven Service for Hospital Heart Care" loading="lazy">
+      <img src="images/footer-award-cnn.jpg" alt="CNN Indonesia Awards 2026: Special Recognition for Excellence in Cardiovascular Care" loading="lazy">
+    </div>
+    <div class="foot-copy">&copy; 2026 BraveHeart, Brawijaya Hospital. All rights reserved.</div>
   </div>
 </footer>
 
@@ -760,5 +791,14 @@
 </a>
 
 </div>
+<script>
+document.querySelectorAll('.bhp button.yt').forEach(function(b){b.addEventListener('click',function(){
+  var w=document.createElement('div');w.className='yt';
+  var f=document.createElement('iframe');
+  f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0&playsinline=1';
+  f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;
+  w.appendChild(f);b.replaceWith(w);
+});});
+</script>
 </body>
 </html>
