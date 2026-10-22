@@ -250,6 +250,9 @@ body{margin:0}
 .bhp .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
 .bhp .brand{display:flex;align-items:center;gap:14px}
 .bhp .brand img{height:58px;width:auto}
+.bhp .brand-row{display:flex;align-items:center;gap:22px;min-width:0}
+.bhp .top-aw{display:flex;align-items:center;gap:14px;padding-left:22px;border-left:1px solid var(--bh-line)}
+.bhp .top-aw img{height:54px;width:auto;mix-blend-mode:multiply}
 .bhp .top .btn{padding:10px 20px;font-size:14px;white-space:nowrap}
 
 /* ===== HERO ===== */
@@ -274,10 +277,9 @@ body{margin:0}
 
 /* ===== TRUST STRIP ===== */
 .bhp .strip{background:var(--bh-navy);color:#fff}
-.bhp .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:28px;align-items:center;padding-top:30px;padding-bottom:30px}
+.bhp .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:center;padding-top:30px;padding-bottom:30px}
 .bhp .strip h3{color:#fff;font-size:1rem;margin-bottom:4px}
 .bhp .strip p{font-size:13.5px;color:rgba(255,255,255,.75)}
-.bhp .strip img{height:58px;width:auto;background:#fff;border-radius:10px;padding:6px 10px}
 
 /* ===== NOT OPEN HEART ===== */
 .bhp .notopen{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;border-left:5px solid var(--bh-red);background:var(--bh-blush);border-radius:0 14px 14px 0;padding:30px 34px}
@@ -441,11 +443,13 @@ body{margin:0}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width:960px){
+  .bhp .top-aw img{height:34px}
+  .bhp .top-aw{gap:10px;padding-left:16px}
+  .bhp .brand-row{gap:16px}
   .bhp .hero-grid,.bhp .twocol,.bhp .tech,.bhp .ins-top,.bhp .locs{grid-template-columns:1fr}
   .bhp .tech.flip .tech-img{order:0}
   .bhp .loc .wrap{grid-template-columns:1fr}
   .bhp .loc .map,.bhp .loc .map iframe{min-height:300px}
-  .bhp .strip .wrap{grid-template-columns:1fr 1fr}
   .bhp .bw-grid{grid-template-columns:repeat(2,1fr)}
   .bhp .aw-grid{grid-template-columns:repeat(3,1fr)}
   .bhp .logos{grid-template-columns:repeat(4,1fr)}
@@ -460,6 +464,8 @@ body{margin:0}
   .bhp .tl{grid-template-columns:1fr}
   .bhp .facts dl{grid-template-columns:auto 1fr}
     .bhp .brand img{height:44px}
+    .bhp .top-aw{display:none}
+  .bhp .strip .wrap{grid-template-columns:1fr;gap:16px}
   .bhp .top .btn{padding:9px 14px;font-size:13px}
   .bhp .bw{padding:30px 22px}
   .bhp .loc{padding:54px 0}
@@ -480,9 +486,15 @@ body{margin:0}
 <!-- ===================== HEADER ===================== -->
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#">
-      <img src="images/brand-braveheart-logo.png" alt="BraveHeart Cardiovascular Center">
-    </a>
+    <div class="brand-row">
+      <a class="brand" href="#">
+        <img src="images/brand-braveheart-logo.png" alt="BraveHeart Cardiovascular Center">
+      </a>
+      <div class="top-aw">
+        <img src="images/header-award-cnbc.webp" alt="CNBC Indonesia Awards 2024: Outstanding Technology-Driven Service for Hospital Heart Care">
+        <img src="images/header-award-cnn.webp" alt="CNN Indonesia Awards 2026: Special Recognition for Excellence in Cardiovascular Care">
+      </div>
+    </div>
     <a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Konsultasi sekarang</a>
   </div>
 </header>
@@ -523,7 +535,6 @@ body{margin:0}
     <div><h3>Kamera mini di dalam pembuluh</h3><p>IVUS &amp; OCT: ukuran dan posisi ring dilihat langsung dari dalam.</p></div>
     <div><h3>Bor mini untuk sumbatan keras</h3><p>Rotablator &amp; OAS: mengikis plak yang sudah mengapur.</p></div>
     <div><h3>Ruang tindakan terhubung ICCU</h3><p>Langsung dipantau intensif setelah ring terpasang.</p></div>
-    <img src="images/strip-award.png" alt="Penghargaan BraveHeart">
   </div>
 </section>
 
@@ -863,7 +874,8 @@ body{margin:0}
         <p>Kami bantu carikan hotel terdekat dari rumah sakit untuk Anda dan keluarga selama perawatan.</p>
       </div>
     </div>
-    <p class="note">*Syarat dan ketentuan berlaku.</p>
+    <div class="stories-cta"><a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Atur perjalanan &amp; jadwal via WhatsApp</a></div>
+    <p class="note" style="text-align:center;margin-top:12px">*Syarat dan ketentuan berlaku.</p>
   </div>
 </section>
 
