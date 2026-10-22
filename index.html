@@ -182,9 +182,13 @@
 .bhp .bw-i div{padding:14px 14px 16px}
 .bhp .bw-i h3{color:#fff;font-size:.92rem;margin-bottom:6px}
 .bhp .bw-i p{font-size:12.5px;color:rgba(255,255,255,.75)}
-.bhp .awards{display:flex;gap:14px;align-items:center;margin-top:26px;flex-wrap:wrap}
-.bhp .awards img{height:56px;width:auto;background:#fff;border-radius:8px;padding:4px 8px}
-.bhp .awards span{font-size:13px;color:rgba(255,255,255,.75)}
+.bhp .aw-title{color:#fff;font-size:1.15rem;margin:36px 0 16px}
+.bhp .aw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.bhp .aw{background:#fff;border-radius:12px;overflow:hidden}
+.bhp .aw img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--bh-mist)}
+.bhp .aw div{padding:12px 14px 14px}
+.bhp .aw h4{font-size:.84rem;line-height:1.35;color:var(--bh-navy);margin-bottom:6px;font-weight:700}
+.bhp .aw span{font-size:11.5px;font-weight:700;color:var(--bw-purple);letter-spacing:.02em}
 
 /* ===== FAQ ===== */
 .bhp .faq{margin-top:26px;max-width:860px}
@@ -198,7 +202,8 @@
 /* ===== LOCATIONS ===== */
 .bhp .locs{margin-top:30px}
 .bhp .loc-main{background:#fff;border:1px solid var(--bh-line);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;align-items:center}
-.bhp .loc-main img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.bhp .loc-main .map{align-self:stretch;min-height:340px}
+.bhp .loc-main .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
 .bhp .loc-main>div{padding:28px 32px}
 .bhp .loc-main h3{margin-bottom:6px}
 .bhp .loc-main p{font-size:14.5px;color:var(--bh-mut);margin-bottom:14px}
@@ -224,9 +229,10 @@
   .bhp .hero-grid,.bhp .twocol,.bhp .tech,.bhp .ins-top,.bhp .locs,.bhp .final .wrap{grid-template-columns:1fr}
   .bhp .tech.flip .tech-img{order:0}
   .bhp .loc-main{grid-template-columns:1fr}
-  .bhp .loc-main img{min-height:0;aspect-ratio:16/9}
+  .bhp .loc-main .map,.bhp .loc-main .map iframe{min-height:300px}
   .bhp .strip .wrap{grid-template-columns:1fr 1fr}
   .bhp .bw-grid{grid-template-columns:repeat(2,1fr)}
+  .bhp .aw-grid{grid-template-columns:repeat(3,1fr)}
   .bhp .logos{grid-template-columns:repeat(4,1fr)}
   .bhp .tl{grid-template-columns:1fr 1fr;row-gap:28px}
   .bhp .tl::before{display:none}
@@ -245,6 +251,7 @@
   .bhp .top .btn{padding:9px 14px;font-size:13px}
   .bhp .bw{padding:30px 22px}
   .bhp .bw-grid{grid-template-columns:1fr}
+  .bhp .aw-grid{grid-template-columns:1fr 1fr}
 }
 @media (prefers-reduced-motion:reduce){.bhp *{transition:none!important}}
 </style>
@@ -622,15 +629,18 @@
       <h2>BraveHeart adalah bagian dari Brawijaya Hospital</h2>
       <p class="lead">Didukung jaringan lebih dari 600 dokter umum, spesialis, dan subspesialis &mdash; termasuk profesor dan konsultan klinis &mdash; dengan standar pelayanan Brawijaya Hospital.</p>
       <div class="bw-grid">
-        <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/e3f9fcb9-188e-413a-8137-b586b220d109?width=600&quality=50&format=webp" alt="Tim dokter" loading="lazy"><div><h3>Tim dokter terkurasi</h3><p>600+ dokter melalui credentialing ketat berbasis Evidence-Based Medicine.</p></div></div>
+        <div class="bw-i"><img src="https://brawijayahospital.com/api/proxy?service=internal&amp;path=assets%2Fbb5fb857-06b3-4a0d-a240-333817d0c622&amp;width=600&amp;format=webp&amp;quality=50" alt="Tim dokter" loading="lazy"><div><h3>Tim dokter terkurasi</h3><p>600+ dokter melalui credentialing ketat berbasis Evidence-Based Medicine.</p></div></div>
         <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/679a3762-5ece-4d9e-8cd7-860243b7e899?width=600&quality=50&format=webp" alt="Teknologi medis" loading="lazy"><div><h3>Teknologi medis mutakhir</h3><p>Hybrid OR, Cathlab, MRI, dan teknologi penunjang terkini.</p></div></div>
         <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/9d3e50bb-e13f-47e8-9038-748ea859fbf9?width=600&quality=50&format=webp" alt="Pelayanan HEART" loading="lazy"><div><h3>Pelayanan H.E.A.R.T.</h3><p>1.000+ perawat dan staf yang cepat, ramah, dan personal.</p></div></div>
         <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/41ae2435-34ae-4b4c-9e22-a910c0a2312a?width=600&quality=50&format=webp" alt="Akreditasi" loading="lazy"><div><h3>Akreditasi paripurna</h3><p>Bintang 5 LAM-KPRS dan berbagai penghargaan nasional.</p></div></div>
       </div>
-      <div class="awards">
-        <img src="https://braveheart.co.id/wp-content/uploads/2026/07/cnbc-award-300x111.jpg" alt="CNBC Indonesia Award" loading="lazy">
-        <img src="https://braveheart.co.id/wp-content/uploads/2026/07/cnn-award-300x111.jpg" alt="CNN Indonesia Award" loading="lazy">
-        <span>Penghargaan untuk layanan kardiovaskular dan pengembangan bisnis kesehatan Brawijaya Hospital</span>
+      <h3 class="aw-title">Penghargaan &amp; pencapaian</h3>
+      <div class="aw-grid">
+        <div class="aw"><img src="https://dte49v1irn0nj.cloudfront.net/assets/c13423db-4e78-457b-a06a-782cce0fd9bd?format=webp" alt="Outstanding Leader in Healthcare Business Development 2026, CNN Indonesia" loading="lazy"><div><h4>Outstanding Leader in Healthcare Business Development 2026</h4><span>CNN Indonesia</span></div></div>
+        <div class="aw"><img src="https://dte49v1irn0nj.cloudfront.net/assets/d10aa241-89b7-4783-9afc-10626befbc7a?width=600&amp;quality=50&amp;fit=cover&amp;format=webp" alt="The Best Service Provider 2026, BRI Life" loading="lazy"><div><h4>The Best Service Provider 2026</h4><span>BRI Life</span></div></div>
+        <div class="aw"><img src="https://dte49v1irn0nj.cloudfront.net/assets/0e6da164-9e8f-42e1-92f3-41a84527f913?format=webp" alt="Outstanding Technology-Driven Services for Hospital Heartcare 2024, CNBC Indonesia" loading="lazy"><div><h4>Outstanding Technology-Driven Services for Hospital Heartcare 2024</h4><span>CNBC Indonesia</span></div></div>
+        <div class="aw"><img src="https://dte49v1irn0nj.cloudfront.net/assets/605b40db-6316-4dc7-bbcd-fd26241968a6?format=webp" alt="Greatest Appreciation for Blue Eagle Network Program 2025, Allianz" loading="lazy"><div><h4>Greatest Appreciation for Blue Eagle Network Program 2025</h4><span>Allianz</span></div></div>
+        <div class="aw"><img src="https://dte49v1irn0nj.cloudfront.net/assets/8af37aa5-9e6f-4ce0-993e-40e898da7753?format=webp" alt="Best Service Hospital Partner 2024, BCA Life" loading="lazy"><div><h4>Best Service Hospital Partner 2024</h4><span>BCA Life</span></div></div>
       </div>
     </div>
   </div>
@@ -659,7 +669,7 @@
     <p class="lead">Tindakan pasang ring jantung dengan metode High Quality PCI dilakukan di BraveHeart, Brawijaya Hospital Saharjo &mdash; di tengah Jakarta dan mudah dijangkau dari bandara maupun stasiun.</p>
     <div class="locs">
       <div class="loc-main">
-        <a href="https://maps.app.goo.gl/vXGtBN2S2tYGitYc8"><img src="https://braveheart.co.id/wp-content/uploads/2024/12/map-saharjo.jpg" alt="Peta Brawijaya Hospital Saharjo" loading="lazy"></a>
+        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.297192307743!2d106.8479318!3d-6.2244893999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f364bb352a01%3A0xc7024a70f68f0376!2sBraveHeart%20Cardiovascular%20Center!5e0!3m2!1sen!2sid!4v1792651249793!5m2!1sen!2sid" title="Peta BraveHeart Cardiovascular Center, Brawijaya Hospital Saharjo" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         <div>
           <h3>Brawijaya Hospital Saharjo, Lantai 8</h3>
           <p>Jl. Dr. Saharjo No. 199, Tebet Barat, Tebet, Jakarta Selatan 12810</p>
