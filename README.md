@@ -3,11 +3,11 @@
 Landing page statis untuk GitHub Pages. Semua gambar di-host sendiri di folder `images/`.
 
 ## Cara pakai
-1. Salin folder ini ke `Desktop/GitHub_YanuarNorman/braveheart-pci`.
+1. Repo: github.com/chica126/pci.
 2. Unduh semua gambar (sekali saja), dari dalam folder ini:
    - macOS / Linux / Git Bash: `bash download-images.sh`
    - Windows PowerShell: `powershell -ExecutionPolicy Bypass -File download-images.ps1`
-3. Commit & push. Halaman akan tayang di https://yanuarnorman.github.io/braveheart-pci/
+3. Commit & push. Halaman akan tayang di https://chica126.github.io/pci/
 
 ## Status gambar
 Semua 35 gambar sudah ada di `images/` (termasuk 2 award CNN Wellnest & INDOMEDEX 2026). Script unduh melewati file yang sudah ada.
