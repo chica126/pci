@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pasang Ring Jantung dengan Metode High Quality PCI | BraveHeart, Brawijaya Hospital</title>
+<meta name="description" content="Pasang ring jantung (PCI) minimal invasif dengan panduan IVUS & OCT, Rotablator & OAS, serta Cathlab yang terintegrasi ICCU di BraveHeart, Brawijaya Hospital Saharjo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  Sumber konten: braveheart.co.id/layanan/high-quality-pci (diakses 2026)
+  Angle & struktur edukasi: cci.sg/procedures/coronary-angioplasty
+  Semua CSS di-scope ke .bhp agar aman dipecah menjadi embed Carrd.
+-->
+<style>
+/* ===== TOKENS — warna BraveHeart belum terverifikasi, ganti di sini ===== */
+.bhp{
+  --bh-red:#B3123A;      /* aksen jantung */
+  --bh-red-dk:#8C0E2D;
+  --bh-navy:#13294B;     /* kepercayaan, judul */
+  --bh-ink:#1E2430;
+  --bh-mut:#5B6475;
+  --bh-mist:#F3F5F8;
+  --bh-line:#DDE2EA;
+  --bh-blush:#FBEDEF;
+  --bw-purple:#5E2D79;   /* endorsement Brawijaya */
+  font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--bh-ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;background:#fff;
+}
+.bhp *,.bhp *::before,.bhp *::after{box-sizing:border-box;margin:0;padding:0}
+.bhp img{max-width:100%;display:block}
+.bhp a{color:inherit}
+.bhp h1,.bhp h2,.bhp h3,.bhp h4{color:var(--bh-navy);line-height:1.2;letter-spacing:-.015em;font-weight:800}
+.bhp h2{font-size:clamp(1.6rem,2.8vw,2.15rem);margin-bottom:14px}
+.bhp h3{font-size:1.15rem;font-weight:700}
+.bhp p{max-width:68ch}
+.bhp .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.bhp .sec{padding:76px 0}
+.bhp .sec-mist{background:var(--bh-mist)}
+.bhp .lead{font-size:1.06rem;color:var(--bh-mut)}
+.bhp :focus-visible{outline:3px solid var(--bh-red);outline-offset:3px;border-radius:6px}
+
+/* buttons */
+.bhp .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.bhp .btn-red{background:var(--bh-red);color:#fff}
+.bhp .btn-red:hover{background:var(--bh-red-dk)}
+.bhp .btn-line{border:2px solid var(--bh-navy);color:var(--bh-navy)}
+.bhp .btn-line:hover{background:var(--bh-navy);color:#fff}
+.bhp .btn-white{background:#fff;color:var(--bh-red)}
+.bhp .btn-white:hover{background:var(--bh-blush)}
+.bhp .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ===== HEADER ===== */
+.bhp .top{border-bottom:1px solid var(--bh-line);background:#fff}
+.bhp .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.bhp .brand{display:flex;align-items:center;gap:14px}
+.bhp .brand img{height:40px;width:auto}
+.bhp .brand small{font-size:12.5px;color:var(--bh-mut);border-left:1px solid var(--bh-line);padding-left:14px;line-height:1.35}
+.bhp .brand small b{color:var(--bw-purple);font-weight:700}
+.bhp .top .btn{padding:10px 20px;font-size:14px;white-space:nowrap}
+
+/* ===== HERO ===== */
+.bhp .hero{padding:56px 0 64px;background:linear-gradient(180deg,#fff 0%,var(--bh-mist) 100%)}
+.bhp .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.bhp .crumb{font-size:13.5px;color:var(--bh-mut);margin-bottom:16px}
+.bhp .crumb a{text-decoration:none}
+.bhp .crumb a:hover{color:var(--bh-red)}
+.bhp .hero h1{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-bottom:18px}
+.bhp .hero h1 span{display:block;font-size:.5em;font-weight:600;color:var(--bh-red);letter-spacing:0;margin-top:10px}
+.bhp .hero .lead{margin-bottom:26px}
+.bhp .hero-proof{display:flex;align-items:center;gap:14px;margin-top:26px;color:var(--bh-mut);font-size:14px}
+.bhp .hero-proof strong{font-size:1.9rem;color:var(--bh-navy);font-weight:800;line-height:1}
+.bhp .hero-media{position:relative}
+.bhp .hero-media>img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px}
+.bhp .facts{margin-top:16px;background:#fff;border:1px solid var(--bh-line);border-radius:14px;padding:18px 20px}
+.bhp .facts h3{font-size:.95rem;margin-bottom:12px}
+.bhp .facts dl{display:grid;grid-template-columns:auto 1fr auto 1fr;gap:8px 14px;font-size:13.5px}
+.bhp .facts dt{color:var(--bh-mut)}
+.bhp .facts dd{font-weight:600;color:var(--bh-ink)}
+
+/* ===== TRUST STRIP ===== */
+.bhp .strip{background:var(--bh-navy);color:#fff}
+.bhp .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:28px;align-items:center;padding-top:30px;padding-bottom:30px}
+.bhp .strip h3{color:#fff;font-size:1rem;margin-bottom:4px}
+.bhp .strip p{font-size:13.5px;color:rgba(255,255,255,.75)}
+.bhp .strip img{height:58px;width:auto;background:#fff;border-radius:10px;padding:6px 10px}
+
+/* ===== NOT OPEN HEART ===== */
+.bhp .notopen{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;border-left:5px solid var(--bh-red);background:var(--bh-blush);border-radius:0 14px 14px 0;padding:30px 34px}
+.bhp .notopen .q{font-size:1.25rem;font-weight:800;color:var(--bh-navy);white-space:nowrap}
+.bhp .notopen .a{font-size:1.02rem}
+.bhp .notopen .a b{color:var(--bh-red)}
+
+/* ===== GEJALA ===== */
+.bhp .twocol{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.bhp .who li{list-style:none;padding:12px 0 12px 30px;border-bottom:1px solid var(--bh-line);position:relative}
+.bhp .who li::before{content:"";position:absolute;left:4px;top:21px;width:12px;height:12px;border-radius:50%;border:3px solid var(--bh-red)}
+.bhp table.sym{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--bh-line)}
+.bhp table.sym th{background:var(--bh-navy);color:#fff;text-align:left;padding:12px 16px;font-weight:700}
+.bhp table.sym td{padding:13px 16px;border-top:1px solid var(--bh-line);vertical-align:top;color:var(--bh-mut)}
+.bhp table.sym td:first-child{font-weight:700;color:var(--bh-ink);width:34%}
+.bhp .sym-cta{margin-top:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.bhp .sym-cta p{font-weight:700;color:var(--bh-navy)}
+
+/* ===== HOW IT WORKS (memorable element) ===== */
+.bhp .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px;counter-reset:st}
+.bhp .step{background:#fff;border:1px solid var(--bh-line);border-radius:14px;padding:22px 22px 24px}
+.bhp .step svg{width:100%;height:auto;display:block;margin-bottom:16px}
+.bhp .step-n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--bh-red);color:#fff;font-weight:800;font-size:14px;margin-right:10px}
+.bhp .step h3{display:flex;align-items:center;margin-bottom:8px}
+.bhp .step p{font-size:14.5px;color:var(--bh-mut)}
+
+/* ===== TECH ===== */
+.bhp .tech{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:44px}
+.bhp .tech.flip .tech-img{order:2}
+.bhp .tech-img img{border-radius:16px;width:100%;aspect-ratio:16/11;object-fit:cover}
+.bhp .tech-tag{display:inline-block;font-size:13px;font-weight:700;color:var(--bh-red);background:var(--bh-blush);padding:5px 12px;border-radius:999px;margin-bottom:12px}
+.bhp .tech h3{font-size:1.45rem;margin-bottom:12px}
+.bhp .tech p{color:var(--bh-mut);margin-bottom:10px}
+
+/* ===== COMPARISON (USP) ===== */
+.bhp .cmp-wrap{overflow-x:auto;margin-top:26px;border-radius:14px;border:1px solid var(--bh-line);background:#fff}
+.bhp table.cmp{width:100%;min-width:640px;border-collapse:collapse;font-size:14.5px}
+.bhp table.cmp th{padding:14px 18px;text-align:left;font-weight:700;color:var(--bh-mut);background:#fff;border-bottom:1px solid var(--bh-line)}
+.bhp table.cmp th:last-child{background:var(--bh-red);color:#fff}
+.bhp table.cmp td{padding:15px 18px;border-top:1px solid var(--bh-line);vertical-align:top;color:var(--bh-mut)}
+.bhp table.cmp td:first-child{font-weight:700;color:var(--bh-navy);width:24%}
+.bhp table.cmp td:last-child{background:var(--bh-blush);color:var(--bh-ink);font-weight:600}
+.bhp .why{margin-top:22px;background:#fff;border-left:5px solid var(--bh-navy);border-radius:0 12px 12px 0;padding:22px 26px}
+.bhp .why h3{margin-bottom:8px}
+.bhp .why p{color:var(--bh-mut)}
+.bhp h3.sub{font-size:1.3rem;margin-top:52px}
+/* ===== TIMELINE ===== */
+.bhp .tl{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.bhp .tl::before{content:"";position:absolute;top:19px;left:20px;right:20px;height:3px;background:var(--bh-line)}
+.bhp .tl-i{position:relative;padding:0 16px 0 0}
+.bhp .tl-dot{width:40px;height:40px;border-radius:50%;background:#fff;border:3px solid var(--bh-red);color:var(--bh-red);font-weight:800;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;margin-bottom:16px}
+.bhp .tl-i h3{font-size:1.02rem;margin-bottom:8px}
+.bhp .tl-i ul{padding-left:18px;font-size:14px;color:var(--bh-mut)}
+.bhp .tl-i li{margin-bottom:4px}
+.bhp .note{font-size:13px;color:var(--bh-mut);margin-top:24px;font-style:italic}
+
+/* ===== DOCTORS ===== */
+.bhp .docs{display:flex;flex-direction:column;gap:18px;margin-top:32px}
+.bhp .doc{display:grid;grid-template-columns:150px 1fr auto;gap:26px;align-items:center;background:#fff;border:1px solid var(--bh-line);border-radius:14px;padding:20px}
+.bhp .doc img{width:150px;height:170px;object-fit:cover;object-position:top;border-radius:10px;background:var(--bh-mist)}
+.bhp .doc h3{font-size:1.08rem;margin-bottom:6px}
+.bhp .doc .role{display:inline-block;font-size:13px;font-weight:700;color:var(--bh-red);margin-bottom:10px}
+.bhp .doc p{font-size:14.5px;color:var(--bh-mut);margin-bottom:10px}
+.bhp .doc .sched{font-size:13px;color:#9A7B1A;font-style:italic}
+.bhp .doc-act{display:flex;flex-direction:column;gap:10px;min-width:170px}
+.bhp .doc-act .btn{padding:11px 18px;font-size:14px}
+
+/* ===== STORIES ===== */
+.bhp .stories{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+.bhp .story{border-top:4px solid var(--bh-red);background:#fff;border-radius:0 0 14px 14px;padding:26px 28px;border-left:1px solid var(--bh-line);border-right:1px solid var(--bh-line);border-bottom:1px solid var(--bh-line)}
+.bhp .story h3{margin-bottom:10px}
+.bhp .story p{color:var(--bh-mut);font-size:15px;margin-bottom:12px}
+.bhp .story blockquote{font-size:15px;font-weight:600;color:var(--bh-navy);padding-left:14px;border-left:3px solid var(--bh-line)}
+
+/* ===== INSURANCE ===== */
+.bhp .ins-top{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.bhp .ins-badges{display:flex;gap:14px}
+.bhp .ins-badges img{height:110px;width:auto;border-radius:10px;border:1px solid var(--bh-line)}
+.bhp .logos{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:30px}
+.bhp .logos img{width:100%;aspect-ratio:3/2;object-fit:contain;background:#fff;border:1px solid var(--bh-line);border-radius:10px;padding:8px}
+
+/* ===== FACILITIES ===== */
+.bhp .fac{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.bhp .fac-i img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;margin-bottom:14px}
+.bhp .fac-i h3{margin-bottom:6px}
+.bhp .fac-i p{font-size:14.5px;color:var(--bh-mut)}
+
+/* ===== BRAWIJAYA ENDORSEMENT ===== */
+.bhp .bw{background:var(--bw-purple);color:#fff;border-radius:18px;padding:44px 44px}
+.bhp .bw h2{color:#fff}
+.bhp .bw .lead{color:rgba(255,255,255,.82)}
+.bhp .bw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.bhp .bw-i{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;overflow:hidden}
+.bhp .bw-i img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.bhp .bw-i div{padding:14px 14px 16px}
+.bhp .bw-i h3{color:#fff;font-size:.92rem;margin-bottom:6px}
+.bhp .bw-i p{font-size:12.5px;color:rgba(255,255,255,.75)}
+.bhp .awards{display:flex;gap:14px;align-items:center;margin-top:26px;flex-wrap:wrap}
+.bhp .awards img{height:56px;width:auto;background:#fff;border-radius:8px;padding:4px 8px}
+.bhp .awards span{font-size:13px;color:rgba(255,255,255,.75)}
+
+/* ===== FAQ ===== */
+.bhp .faq{margin-top:26px;max-width:860px}
+.bhp .faq details{border-bottom:1px solid var(--bh-line)}
+.bhp .faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-weight:700;color:var(--bh-navy);position:relative;font-size:1.02rem}
+.bhp .faq summary::-webkit-details-marker{display:none}
+.bhp .faq summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:1.6rem;font-weight:400;color:var(--bh-red)}
+.bhp .faq details[open] summary::after{content:"\2212"}
+.bhp .faq details p{padding:0 0 20px;color:var(--bh-mut)}
+
+/* ===== LOCATIONS ===== */
+.bhp .locs{margin-top:30px}
+.bhp .loc-main{background:#fff;border:1px solid var(--bh-line);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;align-items:center}
+.bhp .loc-main img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.bhp .loc-main>div{padding:28px 32px}
+.bhp .loc-main h3{margin-bottom:6px}
+.bhp .loc-main p{font-size:14.5px;color:var(--bh-mut);margin-bottom:14px}
+.bhp .access{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.bhp .access div{padding:0}
+.bhp .access b{display:block;font-size:1.1rem;color:var(--bh-red)}
+.bhp .access span{font-size:12.5px;color:var(--bh-mut)}
+
+/* ===== FINAL ===== */
+.bhp .final{background:var(--bh-red);color:#fff;padding:70px 0}
+.bhp .final .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.bhp .final h2{color:#fff}
+.bhp .final p{color:rgba(255,255,255,.88)}
+.bhp .emerg{background:rgba(0,0,0,.18);border-radius:14px;padding:22px 24px}
+.bhp .emerg h3{color:#fff;font-size:1rem;margin-bottom:8px}
+.bhp .emerg p{font-size:14px}
+.bhp .foot{background:var(--bh-navy);color:rgba(255,255,255,.7);font-size:13px;padding:26px 0}
+.bhp .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.bhp .wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.22);z-index:50}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:960px){
+  .bhp .hero-grid,.bhp .twocol,.bhp .tech,.bhp .ins-top,.bhp .locs,.bhp .final .wrap{grid-template-columns:1fr}
+  .bhp .tech.flip .tech-img{order:0}
+  .bhp .loc-main{grid-template-columns:1fr}
+  .bhp .loc-main img{min-height:0;aspect-ratio:16/9}
+  .bhp .strip .wrap{grid-template-columns:1fr 1fr}
+  .bhp .bw-grid{grid-template-columns:repeat(2,1fr)}
+  .bhp .logos{grid-template-columns:repeat(4,1fr)}
+  .bhp .tl{grid-template-columns:1fr 1fr;row-gap:28px}
+  .bhp .tl::before{display:none}
+}
+@media (max-width:700px){
+  .bhp .sec{padding:54px 0}
+  .bhp .steps,.bhp .stories,.bhp .fac{grid-template-columns:1fr}
+  .bhp .doc{grid-template-columns:1fr;text-align:left}
+  .bhp .doc img{width:100%;height:260px}
+  .bhp .notopen{grid-template-columns:1fr;gap:10px;padding:24px}
+  .bhp .notopen .q{white-space:normal}
+  .bhp .tl{grid-template-columns:1fr}
+  .bhp .facts dl{grid-template-columns:auto 1fr}
+  .bhp .brand small{display:none}
+  .bhp .brand img{height:32px}
+  .bhp .top .btn{padding:9px 14px;font-size:13px}
+  .bhp .bw{padding:30px 22px}
+  .bhp .bw-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.bhp *{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bhp">
+
+<!-- ===================== HEADER ===================== -->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="https://braveheart.co.id/">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/08/Logo-Braveheart-Horizontal-1.png" alt="BraveHeart Cardiovascular Center">
+      <small>Bagian dari<br><b>Brawijaya Hospital</b></small>
+    </a>
+    <a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Konsultasi sekarang</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <nav class="crumb"><a href="https://braveheart.co.id/">BraveHeart</a> / <a href="https://braveheart.co.id/layanan/">Layanan</a> / Pasang ring jantung</nav>
+      <h1>Pasang ring jantung<span>dengan metode High Quality PCI</span></h1>
+      <p class="lead">Ring jantung dipasang untuk membuka pembuluh darah jantung yang menyempit, tanpa membuka dada. Dengan metode High Quality PCI, dokter tidak hanya memasang ring &mdash; dokter melihat langsung bagian dalam pembuluh darah Anda, sehingga ukuran dan posisi ring benar-benar tepat.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Konsultasi via WhatsApp</a>
+        <a class="btn btn-line" href="#dokter">Minta second opinion</a>
+      </div>
+      <div class="hero-proof"><strong>2.000+</strong> pasien jantung telah ditangani tim BraveHeart</div>
+    </div>
+    <div class="hero-media">
+      <img src="https://braveheart.co.id/wp-content/uploads/2024/09/WhatsApp-Image-2024-10-22-at-13.55.59.webp" alt="Tindakan di Cathlab BraveHeart, Brawijaya Hospital">
+      <div class="facts">
+        <h3>Ringkasan tindakan</h3>
+        <dl>
+          <dt>Jenis</dt><dd>Tanpa membuka dada</dd>
+          <dt>Akses</dt><dd>Pembuluh darah di tangan atau paha</dd>
+          <dt>Pembiusan</dt><dd>Bius lokal, pasien tetap sadar</dd>
+          <dt>Durasi</dt><dd>Umumnya 1&ndash;2 jam</dd>
+          <dt>Pemantauan</dt><dd>ICCU terintegrasi dengan Cathlab</dd>
+          <dt>Biaya</dt><dd>Diestimasi sebelum tindakan</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST STRIP ===================== -->
+<section class="strip">
+  <div class="wrap">
+    <div><h3>Kamera mini di dalam pembuluh</h3><p>IVUS &amp; OCT: ukuran dan posisi ring dilihat langsung dari dalam.</p></div>
+    <div><h3>Bor mini untuk sumbatan keras</h3><p>Rotablator &amp; OAS: mengikis plak yang sudah mengapur.</p></div>
+    <div><h3>Ruang tindakan terhubung ICCU</h3><p>Langsung dipantau intensif setelah ring terpasang.</p></div>
+    <img src="https://braveheart.co.id/wp-content/uploads/2025/10/logo-award-2-1024x329.png" alt="Penghargaan BraveHeart">
+  </div>
+</section>
+
+<!-- ===================== NOT OPEN HEART ===================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="notopen">
+      <div class="q">Apakah ini operasi jantung?</div>
+      <div class="a"><b>Bukan.</b> Pasang ring jantung tidak membuka dada. Dokter memasukkan selang kecil (kateter) melalui pembuluh darah di pergelangan tangan atau paha dengan sayatan sangat kecil, lalu mengarahkannya ke jantung. Anda hanya dibius lokal dan tetap sadar selama tindakan &mdash; karena itu pemulihannya jauh lebih singkat dibanding bedah pintas (bypass).</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GEJALA ===================== -->
+<section class="sec sec-mist" id="gejala">
+  <div class="wrap twocol">
+    <div>
+      <h2>Kapan pasang ring jantung dibutuhkan?</h2>
+      <p class="lead" style="margin-bottom:18px">Dokter dapat merekomendasikan tindakan ini bila pemeriksaan menunjukkan penyempitan berarti pada pembuluh darah jantung (koroner).</p>
+      <ul class="who">
+        <li>Pembuluh darah jantung menyempit cukup parah (penyakit jantung koroner)</li>
+        <li>Nyeri dada (angina) yang tidak membaik dengan obat</li>
+        <li>Membuka kembali aliran darah saat atau setelah serangan jantung</li>
+        <li>Temuan sumbatan dari hasil skrining jantung, meski belum ada keluhan</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-bottom:14px">Kenali gejalanya lebih awal</h3>
+      <table class="sym">
+        <thead><tr><th>Gejala</th><th>Yang mungkin Anda rasakan</th></tr></thead>
+        <tbody>
+          <tr><td>Nyeri dada (angina)</td><td>Rasa tertekan atau terbakar di dada saat aktivitas atau stres, dapat menjalar ke lengan, leher, rahang, atau punggung.</td></tr>
+          <tr><td>Sesak napas</td><td>Sulit bernapas saat aktivitas ringan, disertai lelah yang tidak wajar.</td></tr>
+          <tr><td>Cepat lelah</td><td>Mudah capek meski aktivitas ringan, tanda jantung tidak memompa optimal.</td></tr>
+          <tr><td>Keringat dingin &amp; pusing</td><td>Reaksi tubuh terhadap aliran darah yang tidak lancar, sering muncul tiba-tiba.</td></tr>
+          <tr><td>Detak jantung tidak teratur</td><td>Jantung berdebar kencang tanpa sebab yang jelas.</td></tr>
+          <tr><td>Nyeri ulu hati</td><td>Rasa tidak nyaman di perut atas yang sering dikira masalah lambung.</td></tr>
+          <tr><td>Bengkak pada kaki</td><td>Jantung kesulitan memompa sehingga cairan menumpuk di tubuh.</td></tr>
+        </tbody>
+      </table>
+      <div class="sym-cta">
+        <p>Mengalami salah satu gejala di atas?</p>
+        <a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Konsultasikan sekarang</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="sec" id="cara-kerja">
+  <div class="wrap">
+    <h2>Bagaimana pasang ring jantung bekerja</h2>
+    <p class="lead">Seluruh proses dilakukan dari dalam pembuluh darah, dipandu gambar sinar-X &mdash; dan pada metode High Quality PCI, juga kamera mini di dalam pembuluh darah.</p>
+    <div class="steps">
+
+      <div class="step">
+        <svg viewBox="0 0 300 120" role="img" aria-label="Pembuluh darah menyempit akibat plak">
+          <rect x="6" y="22" width="288" height="76" rx="38" fill="#F6D5DA"/>
+          <rect x="6" y="34" width="288" height="52" rx="26" fill="#C8314F"/>
+          <path d="M95 34 C120 34 130 58 150 58 C170 58 180 34 205 34 Z" fill="#F2D49B"/>
+          <path d="M95 86 C120 86 130 64 150 64 C170 64 180 86 205 86 Z" fill="#F2D49B"/>
+          <path d="M30 60 H80 M220 60 H270" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7"/>
+        </svg>
+        <h3><span class="step-n">1</span>Menuju penyempitan</h3>
+        <p>Kateter tipis dimasukkan melalui pembuluh darah di tangan atau paha, lalu diarahkan ke titik pembuluh darah jantung yang menyempit akibat tumpukan lemak (plak).</p>
+      </div>
+
+      <div class="step">
+        <svg viewBox="0 0 300 120" role="img" aria-label="Balon dikembangkan di area penyempitan">
+          <rect x="6" y="22" width="288" height="76" rx="38" fill="#F6D5DA"/>
+          <rect x="6" y="34" width="288" height="52" rx="26" fill="#C8314F"/>
+          <path d="M95 34 C125 34 135 40 150 40 C165 40 175 34 205 34 Z" fill="#F2D49B"/>
+          <path d="M95 86 C125 86 135 80 150 80 C165 80 175 86 205 86 Z" fill="#F2D49B"/>
+          <line x1="10" y1="60" x2="290" y2="60" stroke="#13294B" stroke-width="3"/>
+          <ellipse cx="150" cy="60" rx="62" ry="18" fill="#9FB3CF" stroke="#13294B" stroke-width="2.5"/>
+        </svg>
+        <h3><span class="step-n">2</span>Balon melebarkan pembuluh</h3>
+        <p>Balon kecil di ujung kateter dikembangkan untuk menekan plak ke dinding pembuluh, sehingga rongga pembuluh kembali lebar.</p>
+      </div>
+
+      <div class="step">
+        <svg viewBox="0 0 300 120" role="img" aria-label="Ring terpasang menjaga pembuluh tetap terbuka">
+          <rect x="6" y="22" width="288" height="76" rx="38" fill="#F6D5DA"/>
+          <rect x="6" y="34" width="288" height="52" rx="26" fill="#C8314F"/>
+          <path d="M95 34 C125 34 135 37 150 37 C165 37 175 34 205 34 Z" fill="#F2D49B"/>
+          <path d="M95 86 C125 86 135 83 150 83 C165 83 175 86 205 86 Z" fill="#F2D49B"/>
+          <polyline points="88,40 98,80 108,40 118,80 128,40 138,80 148,40 158,80 168,40 178,80 188,40 198,80 208,40" fill="none" stroke="#E3E8EF" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M28 60 H62 M54 52 L64 60 L54 68 M236 60 H270 M262 52 L272 60 L262 68" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3><span class="step-n">3</span>Ring menjaga tetap terbuka</h3>
+        <p>Ring (stent) berbentuk jaring logam kecil dikembangkan dan ditinggalkan di tempatnya untuk menopang pembuluh, sehingga aliran darah ke otot jantung kembali lancar.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TECH ===================== -->
+<section class="sec sec-mist" id="teknologi">
+  <div class="wrap">
+    <h2>Apa bedanya High Quality PCI dengan pasang ring biasa?</h2>
+    <p class="lead">PCI adalah nama medis untuk tindakan pasang ring jantung. Bedanya ada pada cara dokter melihat dan menyiapkan pembuluh darah Anda sebelum ring dipasang.</p>
+    <!-- TODO: bagian perbandingan metode perlu tinjauan legal (Permenkes 1787/2010 Pasal 4) -->
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th></th><th>Pasang ring biasa</th><th>Metode High Quality PCI</th></tr></thead>
+        <tbody>
+          <tr><td>Cara dokter melihat pembuluh</td><td>Hanya dari gambar sinar-X &mdash; seperti melihat bayangan pipa dari luar</td><td>Ditambah kamera mini di dalam pembuluh (IVUS &amp; OCT) &mdash; seperti melihat langsung bagian dalam pipa</td></tr>
+          <tr><td>Menentukan ukuran ring</td><td>Diperkirakan dari bayangan sinar-X</td><td>Diukur langsung dari dalam, sehingga ring pas dengan pembuluh Anda</td></tr>
+          <tr><td>Jika sumbatan sudah keras</td><td>Balon bisa sulit mengembang, ring berisiko tidak terbuka sempurna</td><td>Plak yang mengapur dikikis dulu dengan bor mini (Rotablator &amp; OAS), baru ring dipasang</td></tr>
+          <tr><td>Memastikan hasil</td><td>Dinilai dari gambar sinar-X</td><td>Dicek ulang dari dalam: apakah ring sudah menempel rapat di dinding pembuluh</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="why">
+      <h3>Mengapa ini penting bagi Anda?</h3>
+      <p>Ring yang ukurannya pas dan menempel rapat membantu menurunkan risiko pembuluh menyempit lagi di kemudian hari. Artinya, hasil tindakan lebih tahan lama dan kemungkinan Anda perlu tindakan ulang lebih kecil.</p>
+      <p class="note" style="margin-top:10px">Tidak semua pasien membutuhkan seluruh teknologi ini. Dokter menentukan kombinasinya sesuai kondisi pembuluh darah Anda.</p>
+    </div>
+    <h3 class="sub">Tiga teknologi di balik metode High Quality PCI</h3>
+
+    <div class="tech">
+      <div class="tech-img"><img src="https://braveheart.co.id/wp-content/uploads/2025/10/IVUS-Intravascular-Ultrasound-1024x704.jpg" alt="IVUS, pencitraan dari dalam pembuluh darah"></div>
+      <div>
+        <span class="tech-tag">IVUS &amp; OCT</span>
+        <h3>Kamera mini di dalam pembuluh darah</h3>
+        <p>Bayangkan memperbaiki pipa yang tersumbat. Gambar sinar-X hanya memperlihatkan bayangan pipanya dari luar. <b>IVUS</b> dan <b>OCT</b> bekerja seperti kamera dan USG mini yang masuk ke dalam pembuluh darah, sehingga dokter bisa melihat seberapa tebal plaknya dan berapa ukuran pembuluh yang sebenarnya.</p>
+        <p>Dengan begitu dokter memilih ukuran ring yang pas, menempatkannya di titik yang tepat, lalu memastikan ring sudah menempel rapat sebelum tindakan selesai.</p>
+      </div>
+    </div>
+
+    <div class="tech flip">
+      <div class="tech-img"><img src="https://braveheart.co.id/wp-content/uploads/2025/10/New-Advanced-Technology.jpg" alt="Teknologi Rotablator dan OAS"></div>
+      <div>
+        <span class="tech-tag">Rotablator &amp; OAS</span>
+        <h3>Bor mini untuk sumbatan yang sudah keras</h3>
+        <p>Pada sebagian pasien, terutama yang lebih lanjut usia atau penyandang diabetes, plak di pembuluh darah sudah mengapur dan sekeras batu. Balon biasa sulit melebarkannya, seperti mencoba meniup balon di dalam pipa yang berkerak.</p>
+        <p><b>Rotablator</b> dan <b>OAS</b> adalah bor berukuran sangat kecil yang mengikis kerak kapur itu secara halus terlebih dahulu. Setelah jalannya terbuka, ring bisa dipasang dengan aman dan mengembang sempurna.</p>
+      </div>
+    </div>
+
+    <div class="tech">
+      <div class="tech-img"><img src="https://braveheart.co.id/wp-content/uploads/2024/09/WhatsApp-Image-2024-10-22-at-13.55.59.webp" alt="Cathlab BraveHeart terintegrasi ICCU"></div>
+      <div>
+        <span class="tech-tag">Cathlab &amp; ICCU</span>
+        <h3>Ruang tindakan langsung terhubung ke ruang rawat intensif</h3>
+        <p>Ruang tindakan pasang ring (Cathlab) BraveHeart terhubung langsung dengan <b>ICCU</b>, ruang rawat intensif khusus jantung. Setelah ring terpasang, Anda langsung dipantau ketat tanpa perlu dipindahkan jauh, lalu dilanjutkan dengan rehabilitasi jantung agar pulih optimal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT TO EXPECT ===================== -->
+<section class="sec" id="proses">
+  <div class="wrap">
+    <h2>Yang perlu Anda ketahui sebelum dan sesudah tindakan</h2>
+    <p class="lead">Mengetahui alurnya sejak awal membantu Anda dan keluarga lebih tenang dalam mengambil keputusan.</p>
+    <!-- TODO: validasi durasi & masa rawat dengan tim medis BraveHeart sebelum publish -->
+    <div class="tl">
+      <div class="tl-i">
+        <div class="tl-dot">1</div>
+        <h3>Konsultasi &amp; pemeriksaan</h3>
+        <ul><li>Konsultasi dengan dokter jantung</li><li>Pemeriksaan penunjang untuk memastikan lokasi dan tingkat penyempitan</li><li>Estimasi biaya &amp; pengecekan asuransi</li></ul>
+      </div>
+      <div class="tl-i">
+        <div class="tl-dot">2</div>
+        <h3>Hari tindakan</h3>
+        <ul><li>Bius lokal, pasien tetap sadar</li><li>Kateter melalui tangan atau paha</li><li>Balon dan ring dipasang dengan panduan IVUS/OCT</li></ul>
+      </div>
+      <div class="tl-i">
+        <div class="tl-dot">3</div>
+        <h3>Pemantauan</h3>
+        <ul><li>Dipantau di ICCU setelah tindakan</li><li>Umumnya dapat pulang dalam 1&ndash;2 hari</li><li>Penjelasan obat dan aktivitas yang aman</li></ul>
+      </div>
+      <div class="tl-i">
+        <div class="tl-dot">4</div>
+        <h3>Pemulihan</h3>
+        <ul><li>Rehabilitasi medik jantung</li><li>Konsumsi obat sesuai anjuran dokter</li><li>Kontrol berkala dan perbaikan pola hidup</li></ul>
+      </div>
+    </div>
+    <p class="note">Rencana tindakan, lama perawatan, dan masa pemulihan berbeda untuk setiap pasien dan akan dijelaskan dokter secara rinci sebelum tindakan.</p>
+  </div>
+</section>
+
+<!-- ===================== DOCTORS ===================== -->
+<section class="sec sec-mist" id="dokter">
+  <div class="wrap">
+    <h2>Tim dokter intervensi jantung</h2>
+    <p class="lead">Tindakan ditangani dokter spesialis dan subspesialis yang berasal dari dua rumah sakit pendidikan dan penelitian utama di Indonesia.</p>
+    <div class="docs">
+
+      <div class="doc">
+        <img src="https://braveheart.co.id/wp-content/uploads/elementor/thumbs/Dr.-dr-Todung-Silalahi-SpPD-KKV-scaled-rmy7cbfxmp7qc6vm3f4450b3u5y5qe1qwcqscx4zb4.jpg" alt="Dr. dr. Todung Donald Aposan Silalahi">
+        <div>
+          <h3>Dr. dr. Todung Donald Aposan Silalahi, Sp.PD-KKV, FINASIM, FICA, FAPSIC, FACC, FSCAI</h3>
+          <span class="role">Konsultan Kardiologi Intervensi</span>
+          <p>Memegang fellowship dari American College of Cardiology (FACC) dan Society for Cardiovascular Angiography and Interventions (FSCAI), dua organisasi rujukan internasional di bidang intervensi jantung, serta Asian Pacific Society of Interventional Cardiology (FAPSIC). Kompetensinya di tindakan kateterisasi dan pemasangan ring diakui di tingkat global.</p>
+          <div class="sched">[Lengkapi jadwal praktik]</div>
+        </div>
+        <div class="doc-act">
+          <a class="btn btn-red" href="https://api.whatsapp.com/send?phone=6287714425196&text=Halo%20BraveHeart%20Care%20Saya%20Ingin%20Berkonsultasi%20dengan%20Dr.%20dr.%20Todung%20Donald%20Aposan%20Silalahi%2C%20Mohon%20Informasinya">Buat janji temu</a>
+          <a class="btn btn-line" href="https://braveheart.co.id/doctor/todung-silalahi-id/">Lihat profil</a>
+        </div>
+      </div>
+
+      <div class="doc">
+        <img src="https://braveheart.co.id/wp-content/uploads/elementor/thumbs/Dr.-Simon-Salim-Sp.PD-KKV-1-scaled-rmy7cbfxmp7qc6vm3f4450b3u5y5qe1qwcqscx4zb4.jpg" alt="Dr. dr. Simon Salim">
+        <div>
+          <h3>Dr. dr. Simon Salim, Sp.PD-KKV, M.Kes, AIFO, FINASIM, FACP, FICA, FACC, FHRS</h3>
+          <span class="role">Konsultan Elektrofisiologi/Terapi Alat &amp; Kardiologi Intervensi</span>
+          <p>Kombinasi keahlian yang jarang: intervensi pembuluh koroner sekaligus elektrofisiologi (gangguan irama jantung) dan terapi alat. Relevan bagi pasien yang penyempitan pembuluhnya disertai detak jantung tidak teratur. Anggota Heart Rhythm Society (FHRS) dan American College of Cardiology (FACC).</p>
+          <div class="sched">[Lengkapi jadwal praktik]</div>
+        </div>
+        <div class="doc-act">
+          <a class="btn btn-red" href="https://api.whatsapp.com/send?phone=6287714425196&text=Halo%20BraveHeart%20Care%20Saya%20Ingin%20Berkonsultasi%20dengan%20Dr.%20dr.%20Simon%20Salim%2C%20Mohon%20Informasinya">Buat janji temu</a>
+          <a class="btn btn-line" href="https://braveheart.co.id/doctor/simon-salim-id/">Lihat profil</a>
+        </div>
+      </div>
+
+      <div class="doc">
+        <img src="https://braveheart.co.id/wp-content/uploads/elementor/thumbs/dr.-Vienna-Rossimarina-Sp.JPK_-scaled-rmy7cbfxmp7qc6vm3f4450b3u5y5qe1qwcqscx4zb4.jpg" alt="dr. Vienna Rossimarina">
+        <div>
+          <h3>dr. Vienna Rossimarina, Sp.JP(K)</h3>
+          <span class="role">Konsultan Kardiologi Intervensi &amp; Perawatan Intensif Kardiovaskular</span>
+          <p>Menguasai dua fase yang paling menentukan: tindakan intervensi di Cathlab dan perawatan intensif kardiovaskular sesudahnya. Keahlian ini menjadi kunci di alur BraveHeart, di mana pasien langsung dipantau di ICCU setelah ring terpasang.</p>
+          <div class="sched">[Lengkapi jadwal praktik]</div>
+        </div>
+        <div class="doc-act">
+          <a class="btn btn-red" href="https://api.whatsapp.com/send?phone=6287714425196&text=Halo%20BraveHeart%20Care%20Saya%20Ingin%20Berkonsultasi%20dengan%20dr.%20Vienna%20Rossimarina%2C%20Sp.JP%20%28K%29%2C%20Mohon%20Informasinya">Buat janji temu</a>
+          <a class="btn btn-line" href="https://braveheart.co.id/doctor/vienna-rossimarina-id/">Lihat profil</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORIES ===================== -->
+<!-- TODO: testimoni pasien perlu tinjauan legal (Permenkes 1787/2010 Pasal 4) sebelum dipakai di iklan -->
+<section class="sec" id="cerita">
+  <div class="wrap">
+    <h2>Mereka yang memilih berobat di negeri sendiri</h2>
+    <div class="stories">
+      <div class="story">
+        <h3>Bapak Budi, Jakarta</h3>
+        <p>Merasa sehat tanpa keluhan, Pak Budi baru mengetahui ada penyakit jantung koroner saat menjalani skrining jantung. Beliau menjalani pemasangan ring di BraveHeart dan pulih dengan baik.</p>
+        <blockquote>&ldquo;Rutin lakukan skrining jantung, jaga pola hidup, dan percayalah pengobatan di negeri sendiri bisa diandalkan.&rdquo;</blockquote>
+      </div>
+      <div class="story">
+        <h3>Bapak Abdul, Pontianak</h3>
+        <p>Nyeri dada dan sesak yang sering kambuh membawa Pak Abdul dari Pontianak ke BraveHeart Jakarta. Ditangani tim intervensi dengan teknik High Quality PCI, kondisinya membaik dan beliau dapat segera kembali ke rumah.</p>
+        <blockquote>Perawatan yang tepat tidak harus jauh dari rumah.</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSURANCE ===================== -->
+<section class="sec sec-mist" id="asuransi">
+  <div class="wrap">
+    <div class="ins-top">
+      <div>
+        <h2>Biaya jelas sebelum tindakan</h2>
+        <p class="lead" style="margin-bottom:22px">Tim Insurance Relation BraveHeart membantu menghitung estimasi biaya dan memastikan asuransi swasta Anda dapat digunakan dengan tepat &mdash; sebelum Anda memutuskan.</p>
+        <a class="btn btn-red" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Tanyakan estimasi biaya</a>
+      </div>
+      <div class="ins-badges">
+        <img src="https://braveheart.co.id/wp-content/uploads/2025/10/pru_prior_igf_rspb_sep_2023_500px.jpg" alt="Prudential Priority">
+        <img src="https://braveheart.co.id/wp-content/uploads/2025/10/blue-eagle.jpg" alt="Allianz Blue Eagle">
+      </div>
+    </div>
+    <div class="logos" aria-label="Rekanan asuransi dan perusahaan">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/1.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/2.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/3.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/4.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/5.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/6.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/7.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/8.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/9.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/10.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/11.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/12.jpg" alt="Rekanan asuransi" loading="lazy">
+      <img src="https://braveheart.co.id/wp-content/uploads/2025/10/13.jpg" alt="Rekanan asuransi" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FACILITIES / PASIEN LUAR KOTA ===================== -->
+<section class="sec" id="fasilitas">
+  <div class="wrap">
+    <h2>Datang dari luar kota? Kami atur perjalanannya</h2>
+    <p class="lead">Fokus Anda cukup pada pemulihan. Perjalanan dan akomodasi kami bantu siapkan.</p>
+    <div class="fac">
+      <div class="fac-i">
+        <img src="https://brwimage.carrd.co/assets/images/image03.jpg?v=30c41e60" alt="Konsultasi via WhatsApp" loading="lazy">
+        <h3>Konsultasi via WhatsApp</h3>
+        <p>Kirim hasil pemeriksaan Anda, tanyakan rencana tindakan, dan atur jadwal sebelum berangkat.</p>
+      </div>
+      <div class="fac-i">
+        <img src="https://brwimage.carrd.co/assets/images/image02.jpg?v=30c41e60" alt="Penjemputan pasien" loading="lazy">
+        <h3>Penjemputan</h3>
+        <p>Layanan VIP transport menjemput Anda dari bandara, stasiun, atau akomodasi langsung ke rumah sakit.</p>
+      </div>
+      <div class="fac-i">
+        <img src="https://brwimage.carrd.co/assets/images/image05.jpg?v=58a4c578" alt="Rekomendasi akomodasi" loading="lazy">
+        <h3>Akomodasi</h3>
+        <p>Kami bantu carikan hotel terdekat dari rumah sakit untuk Anda dan keluarga selama perawatan.</p>
+      </div>
+    </div>
+    <p class="note">*Syarat dan ketentuan berlaku.</p>
+  </div>
+</section>
+
+<!-- ===================== MENGAPA BRAWIJAYA ===================== -->
+<section class="sec sec-mist">
+  <div class="wrap">
+    <div class="bw">
+      <h2>BraveHeart adalah bagian dari Brawijaya Hospital</h2>
+      <p class="lead">Didukung jaringan lebih dari 600 dokter umum, spesialis, dan subspesialis &mdash; termasuk profesor dan konsultan klinis &mdash; dengan standar pelayanan Brawijaya Hospital.</p>
+      <div class="bw-grid">
+        <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/e3f9fcb9-188e-413a-8137-b586b220d109?width=600&quality=50&format=webp" alt="Tim dokter" loading="lazy"><div><h3>Tim dokter terkurasi</h3><p>600+ dokter melalui credentialing ketat berbasis Evidence-Based Medicine.</p></div></div>
+        <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/679a3762-5ece-4d9e-8cd7-860243b7e899?width=600&quality=50&format=webp" alt="Teknologi medis" loading="lazy"><div><h3>Teknologi medis mutakhir</h3><p>Hybrid OR, Cathlab, MRI, dan teknologi penunjang terkini.</p></div></div>
+        <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/9d3e50bb-e13f-47e8-9038-748ea859fbf9?width=600&quality=50&format=webp" alt="Pelayanan HEART" loading="lazy"><div><h3>Pelayanan H.E.A.R.T.</h3><p>1.000+ perawat dan staf yang cepat, ramah, dan personal.</p></div></div>
+        <div class="bw-i"><img src="https://dte49v1irn0nj.cloudfront.net/assets/41ae2435-34ae-4b4c-9e22-a910c0a2312a?width=600&quality=50&format=webp" alt="Akreditasi" loading="lazy"><div><h3>Akreditasi paripurna</h3><p>Bintang 5 LAM-KPRS dan berbagai penghargaan nasional.</p></div></div>
+      </div>
+      <div class="awards">
+        <img src="https://braveheart.co.id/wp-content/uploads/2026/07/cnbc-award-300x111.jpg" alt="CNBC Indonesia Award" loading="lazy">
+        <img src="https://braveheart.co.id/wp-content/uploads/2026/07/cnn-award-300x111.jpg" alt="CNN Indonesia Award" loading="lazy">
+        <span>Penghargaan untuk layanan kardiovaskular dan pengembangan bisnis kesehatan Brawijaya Hospital</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <h2>Pertanyaan yang sering diajukan</h2>
+    <div class="faq">
+      <details><summary>Apa itu PCI dan High Quality PCI?</summary><p>PCI (<i>Percutaneous Coronary Intervention</i>) adalah nama medis untuk tindakan pasang ring jantung: membuka pembuluh darah jantung yang menyempit dengan balon, lalu memasang ring agar tetap terbuka. High Quality PCI adalah metode pasang ring yang dilengkapi kamera mini di dalam pembuluh (IVUS &amp; OCT) dan, bila diperlukan, bor mini untuk plak yang keras (Rotablator &amp; OAS), agar ukuran dan posisi ring lebih tepat.</p></details>
+      <details><summary>Apakah saya pasti membutuhkan semua teknologi High Quality PCI?</summary><p>Tidak selalu. Kamera mini (IVUS/OCT) membantu pada banyak kasus, sedangkan bor mini (Rotablator/OAS) hanya dipakai bila plak sudah mengapur. Dokter akan menjelaskan teknologi apa yang Anda butuhkan berdasarkan hasil pemeriksaan.</p></details>
+      <details><summary>Apakah pasang ring jantung sama dengan operasi jantung terbuka?</summary><p>Tidak. Tindakan ini dilakukan melalui pembuluh darah di tangan atau paha dengan sayatan sangat kecil dan bius lokal. Dada tidak dibuka, sehingga pemulihannya lebih singkat dibanding bedah pintas (bypass).</p></details>
+      <details><summary>Siapa yang membutuhkan prosedur PCI?</summary><p>Pasien penyakit jantung koroner dengan penyempitan bermakna pada pembuluh darah jantung, termasuk yang mengalami nyeri dada (angina) atau serangan jantung. Keputusan tindakan diambil dokter berdasarkan hasil pemeriksaan.</p></details>
+      <details><summary>Bagaimana cara kerja ring jantung?</summary><p>Ring adalah tabung jaring logam kecil yang dimasukkan ke pembuluh yang menyempit. Setelah dikembangkan, ring menahan dinding pembuluh agar tetap terbuka. Umumnya ring dilapisi obat untuk membantu mengurangi risiko penyempitan ulang.</p></details>
+      <details><summary>Apakah prosedur PCI berisiko?</summary><p>Seperti tindakan medis lainnya, PCI memiliki risiko, namun tergolong rendah. Dokter akan menjelaskan manfaat dan risikonya secara rinci sebelum tindakan, dan tim medis memantau Anda di ICCU setelahnya.</p></details>
+      <details><summary>Berapa biaya pasang ring jantung dan apakah ditanggung asuransi?</summary><p>Biaya bergantung pada kondisi pembuluh, jumlah ring, dan teknologi yang dibutuhkan. Tim Insurance Relation BraveHeart akan memberikan estimasi dan membantu memastikan pertanggungan asuransi swasta Anda sebelum tindakan.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCATIONS ===================== -->
+<section class="sec sec-mist" id="lokasi">
+  <div class="wrap">
+    <h2>Lokasi tindakan</h2>
+    <p class="lead">Tindakan pasang ring jantung dengan metode High Quality PCI dilakukan di BraveHeart, Brawijaya Hospital Saharjo &mdash; di tengah Jakarta dan mudah dijangkau dari bandara maupun stasiun.</p>
+    <div class="locs">
+      <div class="loc-main">
+        <a href="https://maps.app.goo.gl/vXGtBN2S2tYGitYc8"><img src="https://braveheart.co.id/wp-content/uploads/2024/12/map-saharjo.jpg" alt="Peta Brawijaya Hospital Saharjo" loading="lazy"></a>
+        <div>
+          <h3>Brawijaya Hospital Saharjo, Lantai 8</h3>
+          <p>Jl. Dr. Saharjo No. 199, Tebet Barat, Tebet, Jakarta Selatan 12810</p>
+          <div class="access">
+            <div><b>15 menit</b><span>dari Stasiun KCIC &amp; MRT</span></div>
+            <div><b>15 menit</b><span>dari Bandara Halim Perdanakusuma</span></div>
+            <div><b>15 menit</b><span>dari Pintu Tol Cawang</span></div>
+          </div>
+          <a class="btn btn-line" href="https://maps.app.goo.gl/vXGtBN2S2tYGitYc8">Dapatkan petunjuk arah</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final" id="kontak">
+  <div class="wrap">
+    <div>
+      <h2>Sebelum memutuskan, dapatkan second opinion dari ahlinya</h2>
+      <p style="margin-bottom:24px">Kirimkan hasil pemeriksaan Anda dan konsultasikan dengan tim dokter intervensi jantung BraveHeart melalui WhatsApp.</p>
+      <div class="cta-row">
+        <a class="btn btn-white" href="https://app.linktochat.id/api/pr/braveheart-page-pci?source=https%3A%2F%2Fapp.linktochat.id%2Fpage-rotators&isRedirect=true">Konsultasi via WhatsApp</a>
+      </div>
+    </div>
+    <div class="emerg">
+      <h3>Nyeri dada hebat lebih dari 20 menit?</h3>
+      <p>Nyeri dada yang menjalar, disertai keringat dingin dan sesak, bisa menjadi tanda serangan jantung. Jangan menunggu konsultasi online &mdash; segera ke IGD terdekat atau hubungi 119.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>BraveHeart Cardiovascular Center, Brawijaya Hospital Saharjo Lantai 8</span>
+    <span>&copy; 2026 Brawijaya Hospital</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://api.whatsapp.com/send?phone=6287714425196&text=Halo%20BraveHeart%20Care%20Saya%20Ingin%20Berkonsultasi%20tentang%20Pasang%20Ring%20Jantung%2C%20Mohon%20Informasinya" aria-label="Chat WhatsApp BraveHeart">
+  <svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2.1 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.8-1.7l-.4-.2-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2s0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.4 2.4 3.6 5.7 5c.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5-.3-.2-.6-.4z"/></svg>
+</a>
+
+</div>
+</body>
+</html>
